@@ -1,1 +1,211 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EECS Student Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #003262;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #003262;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Main Content */
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            flex: 1 1 45%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003262;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode body {
+            background-color: #1e1e1e;
+            color: #eaeaea;
+        }
+        .dark-mode header {
+            background-color: #1b1b1b;
+        }
+
+        /* Button Styles */
+        .toggle-dark-mode {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blogs">Publications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <h1>Sandeep Bajamahal</h1>
+    <p>First-Year EECS Student at UC Berkeley</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a first-year EECS student at UC Berkeley with a focus on robotics and computer science. My aim is to solve complex challenges and make a meaningful impact through technology.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="content-wrapper">
+        <div class="card">
+            <h3>Team 2367 Software Lead</h3>
+            <p>Designed and built a robotic system for a high school competition in C++, focusing on precision and functionality.</p>
+            <a href="https://github.com/Saint-Francis-Robotics-Team2367/2024Robot" target="_blank">View on GitHub</a>
+        </div>
+        <div class="card">
+            <h3>Python Robot Game System</h3>
+            <p>Developed an multi-robot control system using UDP, allowing users to drive robots with Xbox controllers</p>
+            <a href="https://github.com/sunnythecode/PythonRobotControlSystem" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section id="blogs">
+    <h2>Publications</h2>
+    <div class="content-wrapper">
+        <div class="card">
+            <h3>Smart Path Generation with Model Predictive Control</h3>
+            <p>An independent research paper describing my approach to simulating MPC for vehicle obstacle-avoidance</p>
+            <a href="https://www.jsr.org/hs/index.php/path/article/view/4952" target="_blank">Read More</a>
+        </div>
+        <div class="card">
+            <h3>Python Robot Game System Blog</h3>
+            <p>A Medium blog I wrote about my robot game system</p>
+            <a href="https://medium.com/@sunny.bajamahal/writing-a-custom-robot-control-system-diy-frc-driverstation-ba1dcba86730" target="_blank">Read More</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or just want to say hi, feel free to reach out to me.</p>
+    <p>Email: <a href="mailto:your.sandeep24@berkeley.edu">sandeep24@berkeley.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sandeep-bajamahal/" target="_blank">Link</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sandeep Bajamahal. All Rights Reserved.</p>
+</footer>
+
+<!-- Dark Mode Toggle Button -->
+<button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<script>
+    // JavaScript for Dark Mode Toggle
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
