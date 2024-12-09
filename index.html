@@ -1,211 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EECS Student Portfolio</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        a {
-            color: #0077b6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        /* Navigation Bar */
-        nav {
-            background-color: #003262;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Header Section */
-        header {
-            background-color: #003262;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2em;
-        }
-
-        /* Main Content */
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .content-wrapper {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            flex: 1 1 45%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #003262;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Dark Mode Styles */
-        .dark-mode body {
-            background-color: #1e1e1e;
-            color: #eaeaea;
-        }
-        .dark-mode header {
-            background-color: #1b1b1b;
-        }
-
-        /* Button Styles */
-        .toggle-dark-mode {
-            background-color: #0077b6;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Responsive Design */
-        @media(max-width: 768px) {
-            .card {
-                flex: 1 1 100%;
-            }
-        }
-    </style>
+  <title>Sandeep Bajamahal</title>
+  
+  <meta name="author" content="Sandeep Bajamahal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  <script type="text/javascript" src="script.js"></script>
 </head>
-<body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blogs">Publications</a>
-    <a href="#contact">Contact</a>
-</nav>
+<body onload="startGame()">
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Sandeep Bajamahal</name>
+              </p>
+              <p>
+                I'm a first-year EECS undergraduate student at UC Berkeley, with interests in reinforcement learning, deep learning, and robotics. Previously, I attended Saint Francis High School, during which I led FRC Team 2367's code team and directed robotics at Allstars Robotics.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:sandeep24@berkeley.edu">Email</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/sandeep-bajamahal/">Linkedin</a> &nbsp/&nbsp
+                <a href="https://www.sandeepbajamahal.com/">Personal Website</a> &nbsp/&nbsp
+                <a href="https://github.com/sunnythecode/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/profile2.png">
+                <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile2.png" class="hoverZoomLink circular-image">
+            </a>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <table style="padding-bottom:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Projects</heading>
+            </td>
+          </tr>
+        </tbody></table>
 
-<header>
-    <h1>Sandeep Bajamahal</h1>
-    <p>First-Year EECS Student at UC Berkeley</p>
-</header>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a first-year EECS student at UC Berkeley with a focus on robotics and computer science. My aim is to solve complex challenges and make a meaningful impact through technology.</p>
-</section>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/mnist.png' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <blogtitle>Writing a Neural Network from Scratch</blogtitle>
+              <br>
+              November 2024
+              <br>
+              <a href="https://github.com/sunnythecode/neural-network-from-scratch">[code]</a>
+              <p></p>
+              <p>A scalable neural network class written with only Numpy. I wrote forward/back propagation and gradient descent from scratch. </p>
+            </td>
+          </tr>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="content-wrapper">
-        <div class="card">
-            <h3>Team 2367 Software Lead</h3>
-            <p>Designed and built a robotic system for a high school competition in C++, focusing on precision and functionality.</p>
-            <a href="https://github.com/Saint-Francis-Robotics-Team2367/2024Robot" target="_blank">View on GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Python Robot Game System</h3>
-            <p>Developed an multi-robot control system using UDP, allowing users to drive robots with Xbox controllers</p>
-            <a href="https://github.com/sunnythecode/PythonRobotControlSystem" target="_blank">View on GitHub</a>
-        </div>
-    </div>
-</section>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/game.png' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <blogtitle>Reinforcement Learning Pong Agent</blogtitle>
+              <br>
+              November 2024
+              <br>
+              <a href="https://github.com/sunnythecode/PongAgent">[code]</a>
+              <p></p>
+              <p> I wrote two iterations of teaching a RL neural network to play pong. In the first volatile iteration I had the agent train after receiving a instant reward. In the optimized iteration I trained the agent to maximize expected reward. </p>
+            </td>
+          </tr>
 
-<section id="blogs">
-    <h2>Publications</h2>
-    <div class="content-wrapper">
-        <div class="card">
-            <h3>Smart Path Generation with Model Predictive Control</h3>
-            <p>An independent research paper describing my approach to simulating MPC for vehicle obstacle-avoidance</p>
-            <a href="https://www.jsr.org/hs/index.php/path/article/view/4952" target="_blank">Read More</a>
-        </div>
-        <div class="card">
-            <h3>Python Robot Game System Blog</h3>
-            <p>A Medium blog I wrote about my robot game system</p>
-            <a href="https://medium.com/@sunny.bajamahal/writing-a-custom-robot-control-system-diy-frc-driverstation-ba1dcba86730" target="_blank">Read More</a>
-        </div>
-    </div>
-</section>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/FERpage.webp' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <blogtitle>Facial Expression Music Recommender</blogtitle>
+              <br>
+              Fazal Mittu,
+              Ruhi Yusuf,
+              <strong>Sandeep Bajamahal</strong>,
+              Koena Jaware,
+              Paree Merchant,
+              Siddhant Hullur
+              <br>
+              June 2022
+              <br>
+              <a href="https://medium.com/visionary-hub/building-a-facial-expression-music-recommender-6fffcaa5a204">[blog]</a>
+              <a href="https://github.com/fazalmittu/FER_Music_Recommender">[code]</a>
+              <p></p>
+              <p> I created a dataset of Spotify songs based on emotion and then trained a classifier to infer the emotion of new songs provided by a user's playlist. </p>
+            </td>
+          </tr>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to collaborate or just want to say hi, feel free to reach out to me.</p>
-    <p>Email: <a href="mailto:your.sandeep24@berkeley.edu">sandeep24@berkeley.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sandeep-bajamahal/" target="_blank">Link</a></p>
-</section>
+        </table>
 
-<footer>
-    <p>&copy; 2024 Sandeep Bajamahal. All Rights Reserved.</p>
-</footer>
+      <table style="padding-top:20px;padding-bottom: 20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading>Research</heading>
+            <br>
+          </td>
+        </tr>
+      </tbody></table>
 
-<!-- Dark Mode Toggle Button -->
-<button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <img src='images/path.png' width="160">
+            </div>
+          </td>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <blogtitle>Smart Path Generation using Model Predictive Control</blogtitle>
+            <br>
+            August 2023
+            <br>
+            <a href="https://www.jsr.org/hs/index.php/path/article/view/4952">[paper]</a>
+            <p></p>
+            <p> Investigated the application of model predictive control(MPC) in path planning and object avoidance. I simulated autonomous robot movement around stationary obstacles using MPC and Pure Pursuit.</p>
+          </td>
+        </tr>
 
-<script>
-    // JavaScript for Dark Mode Toggle
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-    }
+      </tbody></table>
 
-    // Smooth scrolling for navigation
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
 
+      
+      <table style="padding-top:20px;padding-bottom: 20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading>Writing</heading>
+            <br>
+            <br>
+            I've enjoyed writing technical blogs on my <a href="https://medium.com/@sunny.bajamahal"> Medium profile</a>.
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <img src='images/graphSLAM.webp' width="160">
+            </div>
+          </td>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <blogtitle>An Introduction to GraphSLAM</blogtitle>
+            <br>
+            October 2024
+            <br>
+            <a href="https://medium.com/@sunny.bajamahal/an-introduction-to-graphslam-87979d3329f7">[blog]</a>
+            <a href="https://github.com/sunnythecode/GraphSLAMDemo">[code]</a>
+            <p></p>
+            <p>An introduction and explanation of the mathematics behind solving graphSLAM. I also included a Python program implementation. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <img src='images/robot.jpg' width="160">
+            </div>
+          </td>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <blogtitle>Writing A Custom Robot Control System</blogtitle>
+            <br>
+            June 2023
+            <br>
+            <a href="https://medium.com/@sunny.bajamahal/writing-a-custom-robot-control-system-diy-frc-driverstation-ba1dcba86730">[blog]</a>
+            <a href="https://github.com/sunnythecode/PythonRobotControlSystem">[code]</a>
+            <p></p>
+            <p> I wrote a Python robot control system using UDP and threading to wirelessly control up to 4 Raspberry Pi robots. Both server and robot-side code are included. This project is a cost-effective version of FRC Driverstation that I wrote for my high school robotics team. </p>
+          </td>
+        </tr>
+
+      </tbody></table>
+
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <td style="padding:0px">
+          <br>
+          <p style="text-align:left;font-size:small;">
+            Site design from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
 </body>
+
 </html>
