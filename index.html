@@ -31,18 +31,18 @@
                 <name>Sandeep Bajamahal</name>
               </p>
               <p>
-                I'm a second-year EECS undergraduate student at UC Berkeley, with interests in reinforcement learning, deep learning, and robotics. I'm also an undergrad researcher at Ken Goldberg's  <a href="https://autolab.berkeley.edu/">AUTOLab</a>, where I focus on generalist robot policies. Previously, I attended Saint Francis High School, during which I led FRC Team 2367's code team and directed robotics at Allstars Robotics.
+                I'm a second-year EECS undergraduate student at UC Berkeley, with interests in reinforcement learning, deep learning, and robotics. I'm also an undergrad researcher at Ken Goldberg's  <a href="https://autolab.berkeley.edu/">AUTOLab</a>, where I focus on generalist robot policies.
               </p>
               <p style="text-align:center">
                 <a href="mailto:sandeep24@berkeley.edu">Email</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/sandeep-bajamahal/">Linkedin</a> &nbsp/&nbsp
-                <a href="https://www.sandeepbajamahal.com/">Personal Website</a> &nbsp/&nbsp
+                <!-- <a href="https://www.sandeepbajamahal.com/">Personal Website</a> &nbsp/&nbsp -->
                 <a href="https://github.com/sunnythecode/">Github</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/profile2.png">
-                <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile2.png" class="hoverZoomLink circular-image">
+              <a href="images/profile.jpeg">
+                <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile.jpeg" class="hoverZoomLink circular-image">
             </a>
             </td>
           </tr>
@@ -65,11 +65,11 @@
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <img src='images/OXE++.png' width="160">
+                <img src='images/OXE-AUGe.png' width="160">
               </div>
             </td>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <blogtitle>OXE++: Scaling Robot Augmentation for Cross-Embodiment Policy Learning</blogtitle>
+              <blogtitle>OXE-AugE: A Large-Scale Robot Augmentation of OXE for Scaling Cross-Embodiment Policy Learning</blogtitle>
               <br>
               June 2025
               <br>
@@ -77,9 +77,38 @@
                 <b>Sandeep Bajamahal</b>, Zehan Ma, Simeon Adebola,
                 Chenfeng Xu, Ken Goldberg              
               <br>
-              <a href="about:blank">[under review]</a>
+              <a href="https://oxe-auge.github.io/">[website]</a>
+              <a href="https://oxe-auge.github.io/static/OXE-AugE.pdf">[paper]</a>
+              <a href="https://huggingface.co/oxe-auge">[dataset]</a>
+              <a href="https://www.youtube.com/watch?v=Nj0XP6ujhBE">[video]</a>
+              <!-- <a href="">[github]</a> -->
+
               <p></p>
               <p> We study how scaling robot augmentation impacts cross-embodiment learning and introduce OXE++, a large-scale augmented version of the Open X-Embodiment dataset. Augmenting demonstrations across robot embodiments improves policy generalization to unseen robots, achieving 24–45% higher success on real-world manipulation tasks. </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/bag.gif' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <blogtitle>MonoDuo: Using One Robot Arm to Learn Bimanual Policies</blogtitle>
+              <br>
+              Sept 2025, under review
+              <br>
+                <b>Sandeep Bajamahal*</b>, Lawrence Yunliang Chen*, Toru Lin, Zehan Ma, Jitendra Malik, Ken Goldberg              
+              <br>
+              <a href="https://bimanual-monoduo.github.io/">[website]</a>
+              <!-- <a href="https://oxe-auge.github.io/static/OXE-AugE.pdf">[paper]</a> -->
+              <!-- <a href="https://huggingface.co/oxe-auge">[dataset]</a> -->
+              <!-- <a href="https://www.youtube.com/watch?v=Nj0XP6ujhBE">[video]</a> -->
+              <!-- <a href="">[github]</a> -->
+
+              <p></p>
+              <p> We study how to learn bimanual robot policies without relying on scarce bimanual robots or datasets. Our framework, MonoDuo, uses single-arm robot demonstrations paired with human collaboration and augments them into synthetic bimanual data using pose estimation and segmentation. This enables up to 70% zero-shot success on unseen bimanual robots. </p>
             </td>
         </tr>
 
@@ -127,10 +156,13 @@
               <br>
               January 2025
               <br>
+              <a href="https://medium.com/@sunny.bajamahal/learning-to-walk-with-reinforcement-learning-191560eaa283">[blog]</a>
               <a href="https://github.com/sunnythecode/Walker">[code]</a>
-              <a href = "https://youtu.be/OYJrw4SSvJ0">[video]</a>
+              <a href = "https://www.youtube.com/watch?v=WnM62mlzynE">[video]</a>
+              <!-- <a href = "https://x.com/sandeep_b24/status/1995576194763555259">[tweet]</a> -->
+
               <p></p>
-              <p> I implemented and trained a Soft Actor Critic (SAC) network to learn to walk and beat OpenAI's BipedalWalker environment. Trained for ~3 hours on my M1 Mac, achieving a final reward of 306. (Solve score is 300) </p>
+              <p> I implemented and trained a Soft Actor Critic (SAC) network to learn to walk and beat OpenAI's BipedalWalker environment. Trained for ~3 hours on my M1 Mac, achieving a final reward of 306. (Solve score is 300). Experimented with vision-based policies and episode scaling to stabilize training. </p>
             </td>
           </tr>
           
