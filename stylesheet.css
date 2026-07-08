@@ -84,6 +84,11 @@ a {
   font-size: 14px
 }
 
+html,
+body {
+  background: #ffffff;
+}
+
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
@@ -151,8 +156,10 @@ canvas {
   z-index: -1;
 }
 .circular-image {
-  width: 100%; /* Ensures responsiveness */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 50%; /* Crops to a circle */
-  object-fit: cover; /* Ensures the image fits the circle */
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
 }
