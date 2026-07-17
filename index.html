@@ -8,6 +8,14 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  <script>
+    (function () {
+      var savedTheme;
+      try { savedTheme = localStorage.getItem('theme'); } catch (error) {}
+      var theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    }());
+  </script>
   <!-- <script type="text/javascript" src="script.js"></script> -->
 </head>
 <!-- Google tag (gtag.js) -->
@@ -21,6 +29,10 @@
 </script>
 
 <body onload="startGame()">
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <span class="theme-toggle-sun" aria-hidden="true">☀</span>
+    <span class="theme-toggle-moon" aria-hidden="true">☾</span>
+  </button>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -40,6 +52,19 @@
                 <!-- <a href="https://www.sandeepbajamahal.com/">Personal Website</a> &nbsp/&nbsp -->
                 <a href="https://github.com/sunnythecode/">Github</a>
               </p>
+              <div class="affiliations" aria-label="Affiliations">
+                <a class="affiliation affiliation-nvidia" href="https://www.nvidia.com/en-us/omniverse/" aria-label="NVIDIA Omniverse">
+                  <svg class="affiliation-icon" role="img" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.398 0-.787-.062-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964c-.37 0-.733-.035-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z"/>
+                  </svg>
+                </a>
+                <a class="affiliation affiliation-bair" href="https://bair.berkeley.edu/" aria-label="Berkeley Artificial Intelligence Research">
+                  <img src="https://autolab.berkeley.edu/assets/footer/bair.png" alt="">
+                </a>
+                <a class="affiliation affiliation-mlab" href="https://ml.studentorg.berkeley.edu/" aria-label="Machine Learning at Berkeley">
+                  <img src="https://framerusercontent.com/images/X2L3HxNvKTSqpIVv2UyOetyGuHU.png" alt="">
+                </a>
+              </div>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
               <a href="images/latest_profile.JPG">
@@ -322,6 +347,52 @@
         </td>
       </tr>
     </tbody></table>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.theme-toggle');
+
+      function updateToggle(theme) {
+        var nextTheme = theme === 'dark' ? 'light' : 'dark';
+        var label = 'Switch to ' + nextTheme + ' mode';
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+      }
+
+      updateToggle(document.documentElement.dataset.theme);
+      toggle.addEventListener('click', function () {
+        var theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try { localStorage.setItem('theme', theme); } catch (error) {}
+        updateToggle(theme);
+      });
+
+      var konamiCode = [
+        'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+        'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'
+      ];
+      var konamiPosition = 0;
+
+      document.addEventListener('keydown', function (event) {
+        var key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+
+        if (key === konamiCode[konamiPosition]) {
+          konamiPosition += 1;
+        } else {
+          konamiPosition = key === konamiCode[0] ? 1 : 0;
+        }
+
+        if (konamiPosition === konamiCode.length) {
+          document.body.classList.remove('konami-spin');
+          void document.body.offsetWidth;
+          document.body.classList.add('konami-spin');
+          window.setTimeout(function () {
+            document.body.classList.remove('konami-spin');
+          }, 1000);
+          konamiPosition = 0;
+        }
+      });
+    }());
+  </script>
 </body>
 
 </html>
